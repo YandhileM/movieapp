@@ -6,7 +6,7 @@ import { Image, Text, TouchableOpacity, View } from 'react-native'
 const MovieCard = ({id, poster_path, title, vote_average, 
     release_date}: Movie) => {
   return (
-    <Link href={{ pathname: "/movies/[id]", params: { id: id.toString() } }} asChild>
+    <Link href={{ pathname: '/movie/[id]', params: { id: String(id) } }} asChild>
         <TouchableOpacity className="w-[30%]">
             <Image
                 source={{
